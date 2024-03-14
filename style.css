@@ -6,3 +6,64 @@
 body{
     background-color: #000000;
 }
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.Header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top, #081f36e6, #001931b3); 
+}
+.Header div{}
+.Header .Left{
+    display: flex;
+    flex-direction: row;
+}
+
+.Header .Left .Welcome{}
+.Header .Left .Welcome a{}
+.Header .Left .Welcome .Logo{}
+.Header .Left .Welcome .Acceuil{}
+
+.Header .Left .Education{}
+.Header .Left .Education a{
+    padding-left :  30px;
+}
+.Header .Left .Education .Skill{}
+.Header .Left .Education .Subject{}
+
+.Header .Center{}
+
+.Header .Right{}
+.Header .Right a{
+    padding-right :  30px;
+}
+.Header .Right .Tutos{}
+.Header .Right .Forum{}
+.Header .Right .Account{}
+
+
+.Main{
+    display: flex;
+    flex-direction: row;
+}
+.Main div{}
+
+.Main .ToDefine{
+    background-color: #333333;
+    width: 50%;
+}
+.Main .ToDefine p{}
+
+.Main .Content{
+    background-color: #444444;
+    width: 50%;
+}
+.Main .Content p{}
