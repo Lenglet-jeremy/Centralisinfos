@@ -19,7 +19,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to top, #081f36e6, #001931b3); 
+    background: linear-gradient(to top, #0b223ae6, #001325b3); 
 }
 .Header div{}
 .Header .Left{
@@ -50,6 +50,7 @@ a{
 .Header .Right .Account{}
 
 
+
 .Main{
     display: flex;
     flex-direction: row;
@@ -58,12 +59,22 @@ a{
 
 .Main .ToDefine{
     background-color: #333333;
-    width: 50%;
+    width: 20%;
 }
 .Main .ToDefine p{}
 
 .Main .Content{
     background-color: #444444;
-    width: 50%;
+    width: 80%;
 }
 .Main .Content p{}
+
+
+
+.Footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #111111;
+}
