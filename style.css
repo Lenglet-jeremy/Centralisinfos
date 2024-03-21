@@ -11,7 +11,11 @@ a{
     text-decoration: none;
     color: #ffffff;
 }
+p{
+    color: #ffffff;
+}
 
+/* HEADER */
 .Header{
     height: 60px;
     width: 100%;
@@ -22,59 +26,100 @@ a{
     background: linear-gradient(to top, #0b223ae6, #001325b3); 
 }
 .Header div{}
-.Header .Left{
-    display: flex;
-    flex-direction: row;
-}
 
-.Header .Left .Welcome{}
-.Header .Left .Welcome a{}
-.Header .Left .Welcome .Logo{}
-.Header .Left .Welcome .Acceuil{}
+/* LEFT */
+    .Header .Left{
+        display: flex;
+        flex-direction: row;
+    }
+    .Header .Left .Welcome{
+        line-height: 60px;
+        padding-left: 30px;
+    }
+    .Header .Left .Welcome a{}
+    .Header .Left .Welcome .Logo{}
+    .Header .Left .Welcome .HomePage{}
 
-.Header .Left .Education{}
-.Header .Left .Education a{
-    padding-left :  30px;
-}
-.Header .Left .Education .Skill{}
-.Header .Left .Education .Subject{}
+    .Header .Left .Education{
+        display: flex;
+        flex-direction: row;
+    }
+    .Header .Left .Education .SkillsMenu{
+        line-height: 60px;
+        padding-left: 30px;
+    }
+    .Header .Left .Education .SkillsMenu .SkillsAnchor{
+    }
+    .Header .Left .Education .SkillsMenu .SkillsSubMenu{
+        display: none;
+    }
+    .Header .Left .Education .SkillsMenu:hover .SkillsSubMenu{
+        display: flex;
+        flex-direction: column;
+        background-color: #111111;
+        position: absolute;
+        width: 100px;
+    }
 
-.Header .Center{}
+    .Header .Left .Education .SubjectMenu{
+        line-height: 60px;
+        padding-left: 30px;
+    }
+    .Header .Left .Education .SubjectMenu .SubjectAnchor{}
+    .Header .Left .Education .SubjectMenu .SubjectSubMenu{
+        display: none;
+    }
+    .Header .Left .Education .SubjectMenu:hover .SubjectSubMenu{
+        display: flex;
+        flex-direction: column;
+        background-color: #111111;
+        position: absolute;
+        width: 100px;
+    }
+/* /LEFT */
 
-.Header .Right{}
-.Header .Right a{
-    padding-right :  30px;
-}
-.Header .Right .Tutos{}
-.Header .Right .Forum{}
-.Header .Right .Account{}
+/* CENTER */
+    .Header .Center{}
+/* /CENTRE */
 
+/* RIGHT */
+    .Header .Right{}
+    .Header .Right a{
+        padding-right :  30px;
+    }
+    .Header .Right .Tutos{}
+    .Header .Right .Forum{}
+    .Header .Right .Account{}
+/* /RIGHT */
 
+/* /HEADER */
 
-.Main{
-    display: flex;
-    flex-direction: row;
-}
-.Main div{}
+/* MAIN */
+    .Main{
+        display: flex;
+        flex-direction: row;
+    }
+    .Main div{}
+    .Main .ToDefine{
+        background-color: #333333;
+        width: 20%;
+    }
+    .Main .ToDefine p{}
+    .Main .Content{
+        background-color: #444444;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .Main .Content p{}
+/* /MAIN */
 
-.Main .ToDefine{
-    background-color: #333333;
-    width: 20%;
-}
-.Main .ToDefine p{}
-
-.Main .Content{
-    background-color: #444444;
-    width: 80%;
-}
-.Main .Content p{}
-
-
-
+/* FOOTER */
 .Footer{
     position: absolute;
-    bottom: 0;
     width: 100%;
     height: 60px;
+    bottom: 0;
     background-color: #111111;
 }
+/* /FOOTER */
