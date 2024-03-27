@@ -5,6 +5,7 @@
 
 body{
     background-color: #000000;
+    height: 100vh;
 }
 
 a{
@@ -52,13 +53,14 @@ p{
     }
     .Header .Left .Education .SkillsMenu .SkillsSubMenu{
         display: none;
+        padding-left: 20px;
+        background-color: #111111;
+        width: 100px;
     }
     .Header .Left .Education .SkillsMenu:hover .SkillsSubMenu{
         display: flex;
         flex-direction: column;
-        background-color: #111111;
         position: absolute;
-        width: 100px;
     }
 
     .Header .Left .Education .SubjectMenu{
@@ -68,13 +70,33 @@ p{
     .Header .Left .Education .SubjectMenu .SubjectAnchor{}
     .Header .Left .Education .SubjectMenu .SubjectSubMenu{
         display: none;
+        background-color: #111111;
+        padding-left: 20px;
+        width: 100px;
     }
     .Header .Left .Education .SubjectMenu:hover .SubjectSubMenu{
         display: flex;
-        flex-direction: column;
-        background-color: #111111;
         position: absolute;
+        flex-direction: column;
+    }
+
+
+
+    .Header .Left .Education .UniversityCourseMenu{
+        line-height: 60px;
+        padding-left: 30px;
+    }
+    .Header .Left .Education .UniversityCourseMenu .UniversityCourseMenuAnchor{}
+    .Header .Left .Education .UniversityCourseMenu .UniversityCourseSubMenu{
+        display: none;
         width: 100px;
+        background-color: #111111;
+        padding-left: 20px;
+    }
+    .Header .Left .Education .UniversityCourseMenu:hover .UniversityCourseSubMenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
     }
 /* /LEFT */
 
@@ -83,13 +105,35 @@ p{
 /* /CENTRE */
 
 /* RIGHT */
-    .Header .Right{}
-    .Header .Right a{
-        padding-right :  30px;
+    .Header .Right{
+        display: flex;
+        flex-direction: row;
     }
-    .Header .Right .Tutos{}
-    .Header .Right .Forum{}
-    .Header .Right .Account{}
+    .Header .Right a{
+        padding-right :  50px;
+    }
+    .Header .Right .TutosMenu{
+        line-height: 60px;
+        padding-left: 30px;
+    }
+    .Header .Right .TutosMenu .TutosAnchor{}
+    .Header .Right .TutosMenu .TutosSubMenu{
+        display: none;
+        width: auto;
+        background-color: #111111;
+        padding-left: 20px;
+    }
+    .Header .Right .TutosMenu:hover .TutosSubMenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .Header .Right .Forum{
+        line-height: 60px;
+    }
+    .Header .Right .Account{
+        line-height: 60px;}
 /* /RIGHT */
 
 /* /HEADER */
@@ -98,6 +142,7 @@ p{
     .Main{
         display: flex;
         flex-direction: row;
+        height: 100%;
     }
     .Main div{}
     .Main .ToDefine{
@@ -109,17 +154,35 @@ p{
         background-color: #444444;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 70%;
     }
     .Main .Content p{}
+    
+    .Main .Right{
+        width: 10%;
+    }
+    .Main .Right .Notes{
+        background-color: #666666;
+        height: 80%;
+    }
+    .Main .Right .Notes p{}
+
+    .Main .Right .Ads{
+        background-color: #888888;
+        height: 20%;
+    }
+    .Main .Right .Ads p{}
 /* /MAIN */
 
 /* FOOTER */
 .Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 60px;
     bottom: 0;
-    background-color: #111111;
+    background-color: #333333;
 }
 /* /FOOTER */
