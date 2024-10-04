@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Components/NavBars/NavBarPrimary/NavBarPrimary.css">
+    <link rel="stylesheet" href="./Components/NavBars/NavBarSecondary/NavBarSecondary.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./Components/Footer/Footer.css">
+    <title>Centralisinfos</title>
+</head>
+<body>
+    <div class="CentralisinfosPage">
+        <div class="CentralisinfosArea">
+            
+            <div class="NavBars">
+                <div class="NavBarPrimary"></div>
+                <div class="NavBarSecondary"></div>
+            </div>
+
+            <div class="Content">
+
+            </div>
+
+            <div class="Footer">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./Components/NavBars/NavBarPrimary/NavBarPrimary.js"></script>
+    <script src="./Components/NavBars/NavBarSecondary/NavBarSecondary.js"></script>
+    <script src="./Components/Footer/Footer.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadPartial('.NavBarPrimary', './Components/NavBars/NavBarPrimary/NavBarPrimary.html');
+            loadPartial('.NavBarSecondary', './Components/NavBars/NavBarSecondary/NavBarSecondary.html');
+            loadPartial('.Content', './index.js');
+            loadPartial('.Footer', './Components/Footer/Footer.html');
+        });
+
+        function loadPartial(class_, url, callback) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(class_).innerHTML = data;
+                    if (callback) callback();
+                });
+        }
+    </script>
+</body>
+</html>
