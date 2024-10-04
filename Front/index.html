@@ -19,37 +19,39 @@
             </div>
 
             <div class="Content">
-
+                <!-- Contenu principal ici -->
             </div>
 
-            <div class="Footer">
-
-            </div>
+            <div class="Footer"></div>
 
         </div>
     </div>
 
+    <!-- Chargement des fichiers JavaScript -->
     <script src="./Components/NavBars/NavBarPrimary/NavBarPrimary.js"></script>
     <script src="./Components/NavBars/NavBarSecondary/NavBarSecondary.js"></script>
     <script src="./Components/Footer/Footer.js"></script>
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            loadPartial('.NavBarPrimary', './Components/NavBars/NavBarPrimary/NavBarPrimary.html');
-            loadPartial('.NavBarSecondary', './Components/NavBars/NavBarSecondary/NavBarSecondary.html');
-            loadPartial('.Content', './index.js');
-            loadPartial('.Footer', './Components/Footer/Footer.html');
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Utilisation de await pour attendre chaque partie du chargement
+            await loadPartial('.NavBarPrimary', './Components/NavBars/NavBarPrimary/NavBarPrimary.html');
+            await loadPartial('.NavBarSecondary', './Components/NavBars/NavBarSecondary/NavBarSecondary.html');
+            await loadPartial('.Footer', './Components/Footer/Footer.html');
+            
+            // Une fois que tout est chargé, on appelle la fonction test()
+            LoadWidgets();
         });
-
-        function loadPartial(class_, url, callback) {
-            fetch(url)
+    
+        function loadPartial(class_, url) {
+            return fetch(url)
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector(class_).innerHTML = data;
-                    if (callback) callback();
                 });
         }
     </script>
+
 </body>
 </html>
