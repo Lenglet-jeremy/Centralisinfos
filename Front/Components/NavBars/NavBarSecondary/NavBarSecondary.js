@@ -265,7 +265,6 @@ function SetResizeWidget(widget) {
     });
 }
 
-
 function SetCloseWidget(widget, closeButton) {
     closeButton.addEventListener("click", () => {
         widget.remove();
