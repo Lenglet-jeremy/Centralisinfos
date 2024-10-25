@@ -46,9 +46,11 @@
             await loadPartial('.PageContent', './Components/Content/HomePage/HomePage.html');
             await loadPartial('.FooterContent', './Components/Footer/Footer.html');
             
+            
+            HandleNavBarPrimary();
             WidgetHandler();
-            LoadBodyContent(); // Assurez-vous que le contenu est chargé avant d’appeler cette fonction
-            HandleContentLoading()
+            LoadBodyContent();
+            HandleContentLoading("home")
         });
 
     
